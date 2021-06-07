@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Tecno-Dom</title>
+        {{-- Icon --}}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <!-- Styles -->
@@ -18,8 +20,23 @@
                 margin: 0;
             }
 
+            main i{
+                font-size:50px; 
+                margin-right: 15px;
+                cursor: pointer;
+                transition: transform 0.3s,
+                border 0.3s;
+            }
+
+            main i:hover{
+                transform: scale(1.1);
+                border-bottom: 2px solid #000;
+            }
+
             .full-height {
-                height: 100vh;
+                min-height: 100vh;
+                max-width: 1100px;
+                margin: 0 auto;
             }
 
             .flex-center {
@@ -60,8 +77,8 @@
             }
         </style>
     </head>
-    <body>
-        <div class="flex-center position-ref full-height">
+    <body class="full-height">
+        <div class="flex-center position-ref">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -88,5 +105,16 @@
                 </div>
             </div>
         </div>
+
+        {{-- main --}}
+
+        <main>
+            <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint commodi</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore mollitia suscipit officia corporis commodi quasi pariatur a ipsam sequi hic fuga nesciunt, distinctio earum beatae illum ipsum esse aliquam? Quis?</p>
+            <span><i class="fab fa-whatsapp"></i></span>
+            <span><i class="fab fa-facebook-square"></i></span>
+            <span><i class="fab fa-linkedin"></i></span>
+            <span><i class="fab fa-twitter"></i></span>
+        </main>
     </body>
 </html>
